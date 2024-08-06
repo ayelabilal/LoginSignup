@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { productData } from '../Data';
+import { Card } from '@mui/material';
 
 
 const Signup = () => {
@@ -12,7 +14,8 @@ const Signup = () => {
     const user = { fullName, email, password };
     localStorage.setItem('user', JSON.stringify(user));
     localStorage.setItem('isAuthenticated', 'true');
-    window.location.href = '/dashboard'; 
+    window.location.href = '/login';
+    // window.location.href = '/dashboard'; 
   };
 
   return (
@@ -52,10 +55,10 @@ const Signup = () => {
         <button type="submit" className="submit">Signup Here</button>
         <p className="footer">Already have an account  <Link to="/login" className="link">Login</Link></p>
       </form>
-      {/* <div className="banner">
-        <h1 className="wel_text">Welcome!</h1><br />
-        <p className="para">Lorem ipsum dolor sit amet.</p>
-      </div> */}
+              
+
+
+     
     </div>
   );
 };
